@@ -33,7 +33,7 @@ export default function PricingDashboard() {
     }
     try {
       const res = await axios.patch(
-        "http://localhost:5000/api/user/upgrade",
+        `${import.meta.env.VITE_API_URL}/upgrade`,
         payload,
         {
           withCredentials: true,
@@ -66,7 +66,7 @@ export default function PricingDashboard() {
   const getPlan = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/user/view/logged",
+        `${import.meta.env.VITE_API_URL}/view/logged`,
         {
           withCredentials: true
         }
