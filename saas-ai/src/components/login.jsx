@@ -38,7 +38,7 @@ function LoginPage() {
         setLoginLoading(true);
         try {
             const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/login`,
+                `${import.meta.env.VITE_API_URL}/user/login`,
                 { email, password },
                 { withCredentials: true }
             );
@@ -61,7 +61,7 @@ function LoginPage() {
         setCreateLoading(true);
         try {
             const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/create`,
+                `${import.meta.env.VITE_API_URL}/user/create`,
                 {
                     userName,
                     phoneNumber,
@@ -90,7 +90,7 @@ function LoginPage() {
         setOtpLoading(true);
         try {
             await axios.post(
-               `${import.meta.env.VITE_API_URL}/send-otp`,
+               `${import.meta.env.VITE_API_URL}/user/send-otp`,
                 { email },
                 { withCredentials: true }
             );
@@ -110,7 +110,7 @@ function LoginPage() {
         setVerifyLoading(true);
         try {
             await axios.post(
-               `${import.meta.env.VITE_API_URL}/verify-otp`,
+               `${import.meta.env.VITE_API_URL}/user/verify-otp`,
                 { otp },
                 { withCredentials: true }
             );
@@ -130,7 +130,7 @@ function LoginPage() {
         setResetLoading(true);
         try {
             await axios.post(
-                `${import.meta.env.VITE_API_URL}/reset-password`,
+                `${import.meta.env.VITE_API_URL}/user/reset-password`,
                 { password },
                 { withCredentials: true }
             );
@@ -175,7 +175,7 @@ function LoginPage() {
         if (googleLoading) return;
         setGoogleLoading(true);
         window.location.href =
-            "http://localhost:5000/api/user/google";
+           `${import.meta.env.VITE_API_URL}/user/google`;
     };
 
     return (
