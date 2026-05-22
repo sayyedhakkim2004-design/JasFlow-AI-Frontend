@@ -32,7 +32,7 @@ export default function AIEditorPage() {
     setPrompt("");
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/ai/generate/article",
+        `${import.meta.env.VITE_API_URL}/generate/article`,
         { prompt: currentPrompt },
         {
           withCredentials: true,
@@ -58,7 +58,7 @@ export default function AIEditorPage() {
   const getPlan = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/user/view/logged",
+        `${import.meta.env.VITE_API_URL}/view/logged`,
         {
           withCredentials: true
         }
