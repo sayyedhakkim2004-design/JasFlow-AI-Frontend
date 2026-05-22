@@ -23,7 +23,7 @@ export default function DashboardHistory() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/view/logged`,
+        `${import.meta.env.VITE_API_URL}/user/view/logged`,
         {
           withCredentials: true,
         }
@@ -55,7 +55,7 @@ export default function DashboardHistory() {
   const getPlan = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/view/logged`,
+        `${import.meta.env.VITE_API_URL}/user/view/logged`,
         {
           withCredentials: true
         }
