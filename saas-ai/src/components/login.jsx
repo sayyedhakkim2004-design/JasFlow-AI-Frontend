@@ -175,7 +175,7 @@ function LoginPage() {
         if (googleLoading) return;
         setGoogleLoading(true);
         window.location.href =
-           `${import.meta.env.VITE_API_URL}/user/google`;
+           `${import.meta.env.VITE_API_URL}user/google`;
     };
 
     return (
