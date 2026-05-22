@@ -38,7 +38,7 @@ function LoginPage() {
         setLoginLoading(true);
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/user/login",
+                `${import.meta.env.VITE_API_URL}/login`,
                 { email, password },
                 { withCredentials: true }
             );
@@ -61,7 +61,7 @@ function LoginPage() {
         setCreateLoading(true);
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/user/create",
+                `${import.meta.env.VITE_API_URL}/create`,
                 {
                     userName,
                     phoneNumber,
@@ -90,7 +90,7 @@ function LoginPage() {
         setOtpLoading(true);
         try {
             await axios.post(
-                "http://localhost:5000/api/user/send-otp",
+               `${import.meta.env.VITE_API_URL}/send-otp`,
                 { email },
                 { withCredentials: true }
             );
@@ -110,7 +110,7 @@ function LoginPage() {
         setVerifyLoading(true);
         try {
             await axios.post(
-                "http://localhost:5000/api/user/verify-otp",
+               `${import.meta.env.VITE_API_URL}/verify-otp`,
                 { otp },
                 { withCredentials: true }
             );
@@ -130,7 +130,7 @@ function LoginPage() {
         setResetLoading(true);
         try {
             await axios.post(
-                "http://localhost:5000/api/user/reset-password",
+                `${import.meta.env.VITE_API_URL}/reset-password`,
                 { password },
                 { withCredentials: true }
             );
