@@ -78,11 +78,7 @@ function Navbar({ data, isOpen, onToggle }) {
                             path="/dashboard"
                         />
 
-                        <SidebarItem
-                            icon={<PenSquare size={18} />}
-                            title="Editor"
-                            path="/generate"
-                        />
+                       
 
                         <SidebarItem
                             icon={<Sparkles size={18} />}
