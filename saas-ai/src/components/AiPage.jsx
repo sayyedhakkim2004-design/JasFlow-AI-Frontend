@@ -90,15 +90,7 @@ export default function AIEditorPage() {
             <Menu size={24} />
           </button>
           <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-400 ml-auto">
-            <a href="/" className="hover:text-white transition">
-              Editor
-            </a>
-            <a href="/" className="hover:text-white transition">
-              Templates
-            </a>
-            <a href="/" className="hover:text-white transition">
-              Analytics
-            </a>
+           
             {/* Profile */}
             <h2 className="text-white font-semibold text-lg flex items-center gap-1">
               Hello{" "}
